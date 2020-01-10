@@ -1,8 +1,8 @@
-package com.bbahaida.demolivecodingadias;
+package com.bbahaida.codewars;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.stream.Collectors;
+        import java.util.Arrays;
+        import java.util.Comparator;
+        import java.util.stream.Collectors;
 
 public class Order {
     public static String order(String words) {
@@ -12,4 +12,5 @@ public class Order {
                 .sorted(Comparator.comparing(s -> Integer.valueOf(s.replaceAll("\\D", ""))))
                 .collect(Collectors.joining(" "));
     }
+
 }

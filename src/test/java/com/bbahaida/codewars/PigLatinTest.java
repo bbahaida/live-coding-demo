@@ -1,4 +1,4 @@
-package com.bbahaida.demolivecodingadias;
+package com.bbahaida.codewars;
 
 import org.junit.Test;
 

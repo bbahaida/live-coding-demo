@@ -1,4 +1,4 @@
-package com.bbahaida.demolivecodingadias;
+package com.bbahaida.codewars;
 
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;

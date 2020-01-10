@@ -1,4 +1,4 @@
-package com.bbahaida.demolivecodingadias;
+package com.bbahaida.codewars;
 
 public class PigLatin {
     private static final String PIG_REGEX = "(\\w)(\\w*)";
