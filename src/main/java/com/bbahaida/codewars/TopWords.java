@@ -10,7 +10,7 @@ public class TopWords {
     public static List<String> top3(String s) {
         Map<String, Integer> cache = new HashMap<>();
         List<String> strings = Arrays.asList(s.trim().toLowerCase().split(SPECIAL_CHARS_REGEX));
-        strings.parallelStream().forEach(term -> {
+        strings.forEach(term -> {
             if (eligible(term)) {
                 int occ = cache.get(term) != null ? cache.get(term) : 0;
                 cache.put(term, ++occ);
