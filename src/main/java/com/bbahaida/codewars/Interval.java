@@ -1,25 +1,15 @@
 package com.bbahaida.codewars;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
+// https://www.codewars.com/kata/52b7ed099cdc285c300001cd/train/java
 public class Interval {
     public static int sumIntervals(int[][] intervals) {
 
-        if (intervals == null || intervals.length == 0) {
-            return 0;
-        }
-        // TODO: implement this method
-        if (hasOverlap(intervals)) {
-            intervals = handleOverlap(intervals);
-        }
-        return Arrays.stream(intervals).mapToInt(array -> array[1] - array[0]).sum();
-    }
-
-    private static int[][] handleOverlap(int[][] intervals) {
-        return null;
-    }
-
-    private static boolean hasOverlap(int[][] intervals) {
-        return false;
+        return intervals == null ? 0 : (int) Arrays.stream(intervals)
+                .flatMapToInt(interval -> IntStream.range(interval[0], interval[1]))
+                .distinct()
+                .count();
     }
 }
